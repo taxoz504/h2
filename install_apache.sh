@@ -10,3 +10,5 @@ echo "" && read -p "This script is WIP and will only install apache2 LAMP press 
 sudo apt update &>/dev/null
 echo "Installing Apache2 LAMP"
 sudo apt update &>/dev/null && sudo apt install -y apache2 mariadb-server php libapache2-mod-php php-mysql &>/dev/null
+echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php > /dev/null
+echo "PHP files added to /var/www/html/info.php"
