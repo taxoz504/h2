@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-read -p "This script is WIP and will only install apache2 LAMP press enter to start or stop the script" NOINFO
+read -p "This script is WIP and will only install Apache2 (LAMP). Press Enter to continue or Ctrl+C to cancel..." < /dev/tty
 sudo apt update &>/dev/null
 echo "Installing Apache2 LAMP"
 sudo apt update &>/dev/null && sudo apt install -y apache2 mariadb-server php libapache2-mod-php php-mysql &>/dev/null
